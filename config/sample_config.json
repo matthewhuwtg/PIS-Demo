@@ -1,0 +1,42 @@
+{
+  "system": {
+    "name": "Metro Line 1 PIS",
+    "version": "1.0.0",
+    "language": "bilingual",
+    "languages": ["en", "zh"]
+  },
+  "route": {
+    "id": "L1",
+    "name": "Line 1",
+    "direction": "clockwise",
+    "stations": [
+      { "id": "S01", "name_en": "Central Station",   "name_zh": "中央车站",     "arrival_sec": 0 },
+      { "id": "S02", "name_en": "Market Square",      "name_zh": "市集广场",     "arrival_sec": 120 },
+      { "id": "S03", "name_en": "University",         "name_zh": "大学站",       "arrival_sec": 300 },
+      { "id": "S04", "name_en": "Tech Park",          "name_zh": "科技园",       "arrival_sec": 480 },
+      { "id": "S05", "name_en": "Sports Center",      "name_zh": "体育中心",     "arrival_sec": 600 },
+      { "id": "S06", "name_en": "Railway Station",    "name_zh": "火车站",       "arrival_sec": 780 },
+      { "id": "S07", "name_en": "Airport Terminal",   "name_zh": "机场航站楼",   "arrival_sec": 1020 }
+    ]
+  },
+  "display": {
+    "refresh_interval_ms": 1000,
+    "color_scheme": "dark",
+    "show_next_stop": true,
+    "show_time": true
+  },
+  "ipc": {
+    "socket_path": "/tmp/pis_demo.sock",
+    "enabled": true
+  },
+  "dbus": {
+    "service_name": "com.pis.demo",
+    "object_path": "/com/pis/demo",
+    "interface_name": "com.pis.demo.Interface",
+    "enabled": true
+  },
+  "media": {
+    "announcement_enabled": true,
+    "audio_backend": "gstreamer"
+  }
+}
